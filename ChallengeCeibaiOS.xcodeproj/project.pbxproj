@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60D953FFEA5FB07A15514A1 /* Pods_ChallengeCeibaiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599D6B011646E43C363C24E5 /* Pods_ChallengeCeibaiOS.framework */; };
 		EEE875D528B8371300DC1742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D428B8371300DC1742 /* AppDelegate.swift */; };
 		EEE875D728B8371300DC1742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D628B8371300DC1742 /* SceneDelegate.swift */; };
 		EEE875D928B8371300DC1742 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D828B8371300DC1742 /* ViewController.swift */; };
 		EEE875DC28B8371300DC1742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE875DA28B8371300DC1742 /* Main.storyboard */; };
 		EEE875DE28B8371400DC1742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE875DD28B8371400DC1742 /* Assets.xcassets */; };
 		EEE875E128B8371400DC1742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE875DF28B8371400DC1742 /* LaunchScreen.storyboard */; };
+		EEE875EB28B8485D00DC1742 /* LoadingViewXio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875EA28B8485D00DC1742 /* LoadingViewXio.swift */; };
+		EEE875ED28B8486C00DC1742 /* LoadingViewXio.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE875EC28B8486C00DC1742 /* LoadingViewXio.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		599D6B011646E43C363C24E5 /* Pods_ChallengeCeibaiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeCeibaiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE0ADD4CF54D590ACA9A8CF /* Pods-ChallengeCeibaiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeCeibaiOS.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeCeibaiOS/Pods-ChallengeCeibaiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CF30C216219321304D77317C /* Pods-ChallengeCeibaiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeCeibaiOS.release.xcconfig"; path = "Target Support Files/Pods-ChallengeCeibaiOS/Pods-ChallengeCeibaiOS.release.xcconfig"; sourceTree = "<group>"; };
 		EEE875D128B8371300DC1742 /* ChallengeCeibaiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeCeibaiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE875D428B8371300DC1742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE875D628B8371300DC1742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		EEE875DD28B8371400DC1742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEE875E028B8371400DC1742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEE875E228B8371400DC1742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE875EA28B8485D00DC1742 /* LoadingViewXio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewXio.swift; sourceTree = "<group>"; };
+		EEE875EC28B8486C00DC1742 /* LoadingViewXio.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewXio.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60D953FFEA5FB07A15514A1 /* Pods_ChallengeCeibaiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6048FF1DAAACA191C561D73B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AE0ADD4CF54D590ACA9A8CF /* Pods-ChallengeCeibaiOS.debug.xcconfig */,
+				CF30C216219321304D77317C /* Pods-ChallengeCeibaiOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D2DE66C5D34B98BB45D60634 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				599D6B011646E43C363C24E5 /* Pods_ChallengeCeibaiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EEE875C828B8371300DC1742 = {
 			isa = PBXGroup;
 			children = (
 				EEE875D328B8371300DC1742 /* ChallengeCeibaiOS */,
 				EEE875D228B8371300DC1742 /* Products */,
+				6048FF1DAAACA191C561D73B /* Pods */,
+				D2DE66C5D34B98BB45D60634 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +84,7 @@
 		EEE875D328B8371300DC1742 /* ChallengeCeibaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				EEE875E828B8482500DC1742 /* CustomView */,
 				EEE875D428B8371300DC1742 /* AppDelegate.swift */,
 				EEE875D628B8371300DC1742 /* SceneDelegate.swift */,
 				EEE875D828B8371300DC1742 /* ViewController.swift */,
@@ -67,6 +96,23 @@
 			path = ChallengeCeibaiOS;
 			sourceTree = "<group>";
 		};
+		EEE875E828B8482500DC1742 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				EEE875E928B8483200DC1742 /* LoadingXio */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		EEE875E928B8483200DC1742 /* LoadingXio */ = {
+			isa = PBXGroup;
+			children = (
+				EEE875EA28B8485D00DC1742 /* LoadingViewXio.swift */,
+				EEE875EC28B8486C00DC1742 /* LoadingViewXio.xib */,
+			);
+			path = LoadingXio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEE875E528B8371400DC1742 /* Build configuration list for PBXNativeTarget "ChallengeCeibaiOS" */;
 			buildPhases = (
+				35D07F3FD1E85204ED8B3C9A /* [CP] Check Pods Manifest.lock */,
 				EEE875CD28B8371300DC1742 /* Sources */,
 				EEE875CE28B8371300DC1742 /* Frameworks */,
 				EEE875CF28B8371300DC1742 /* Resources */,
+				30729E07815D8E6338539043 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE875ED28B8486C00DC1742 /* LoadingViewXio.xib in Resources */,
 				EEE875E128B8371400DC1742 /* LaunchScreen.storyboard in Resources */,
 				EEE875DE28B8371400DC1742 /* Assets.xcassets in Resources */,
 				EEE875DC28B8371300DC1742 /* Main.storyboard in Resources */,
@@ -133,11 +182,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30729E07815D8E6338539043 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeCeibaiOS/Pods-ChallengeCeibaiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeCeibaiOS/Pods-ChallengeCeibaiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChallengeCeibaiOS/Pods-ChallengeCeibaiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35D07F3FD1E85204ED8B3C9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChallengeCeibaiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EEE875CD28B8371300DC1742 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE875EB28B8485D00DC1742 /* LoadingViewXio.swift in Sources */,
 				EEE875D928B8371300DC1742 /* ViewController.swift in Sources */,
 				EEE875D528B8371300DC1742 /* AppDelegate.swift in Sources */,
 				EEE875D728B8371300DC1742 /* SceneDelegate.swift in Sources */,
@@ -282,6 +374,7 @@
 		};
 		EEE875E628B8371400DC1742 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AE0ADD4CF54D590ACA9A8CF /* Pods-ChallengeCeibaiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +403,7 @@
 		};
 		EEE875E728B8371400DC1742 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF30C216219321304D77317C /* Pods-ChallengeCeibaiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
