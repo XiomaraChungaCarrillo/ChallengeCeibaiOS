@@ -15,17 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZx-3N-RvY" customClass="LoadingViewXio" customModule="ChallengeCeibaiOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZx-3N-RvY" customClass="LoadingViewXio" customModule="ChallengeCeibaiOS" customModuleProvider="target">
                                 <rect key="frame" x="82" y="323" width="250" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="8cx-Ia-M1y"/>
-                                    <constraint firstAttribute="height" constant="250" id="ebb-p7-SnR"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zZx-3N-RvY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3FH-We-iF2"/>
                             <constraint firstItem="zZx-3N-RvY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aEr-fP-ZnP"/>

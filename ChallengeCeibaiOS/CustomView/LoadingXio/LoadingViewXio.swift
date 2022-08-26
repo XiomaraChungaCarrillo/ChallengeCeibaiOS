@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 @IBDesignable
 class LoadingViewXio: UIView {
     
@@ -21,6 +23,8 @@ class LoadingViewXio: UIView {
     @IBOutlet var circleD: UIView!
     @IBOutlet weak var heighLoading: NSLayoutConstraint!
     @IBOutlet weak var widthLoading: NSLayoutConstraint!
+    
+    
     
     //Inspectable
     @IBInspectable var isHiddenLoading: Bool = true
