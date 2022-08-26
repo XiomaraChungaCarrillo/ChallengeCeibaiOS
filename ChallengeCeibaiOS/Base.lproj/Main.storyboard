@@ -15,25 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZx-3N-RvY" customClass="LoadingViewXio" customModule="ChallengeCeibaiOS" customModuleProvider="target">
-                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o39-41-UsF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSL-8C-Lq5">
+                                        <rect key="frame" x="77" y="396" width="260" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="0.31431410047743058" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zZx-3N-RvY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3FH-We-iF2"/>
-                            <constraint firstItem="zZx-3N-RvY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aEr-fP-ZnP"/>
+                            <constraint firstItem="o39-41-UsF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0IY-p2-awi"/>
+                            <constraint firstAttribute="bottom" secondItem="o39-41-UsF" secondAttribute="bottom" id="Ise-Mx-QcO"/>
+                            <constraint firstItem="o39-41-UsF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="alz-z7-kEh"/>
+                            <constraint firstItem="o39-41-UsF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="clt-oB-w7D"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="LoadingViewprueba" destination="zZx-3N-RvY" id="KU4-Jf-g9D"/>
+                        <outlet property="viewTest" destination="o39-41-UsF" id="a3n-Yi-RzM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
 </document>

@@ -7,26 +7,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewXio" customModule="ChallengeCeibaiOS" customModuleProvider="target">
-            <connections>
-                <outlet property="circleA" destination="zE2-LB-tHj" id="mFT-lP-Rqe"/>
-                <outlet property="circleB" destination="S5O-X5-ibG" id="MHw-D0-eFF"/>
-                <outlet property="circleC" destination="Xy4-jR-zAq" id="DQz-PL-Nph"/>
-                <outlet property="circleD" destination="0zP-y9-GEE" id="ag4-3C-oV0"/>
-                <outlet property="containerView" destination="gKi-P2-bgl" id="9zw-nb-xtr"/>
-                <outlet property="heighLoading" destination="7hD-U5-xls" id="Fr3-GH-kIm"/>
-                <outlet property="loadingView" destination="SHS-Wv-MTA" id="Exq-yb-i8S"/>
-                <outlet property="widthLoading" destination="KKj-IO-hy0" id="f7z-HR-AwW"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view alpha="0.40000000000000002" contentMode="scaleToFill" id="iN0-l3-epB">
+        <view alpha="0.40000000000000002" contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingViewXio" customModule="ChallengeCeibaiOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4D-Kl-Uqq">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                    <color key="backgroundColor" red="0.011764705882352941" green="0.031372549019607843" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4D-Kl-Uqq">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.031372549019607843" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHS-Wv-MTA">
                     <rect key="frame" x="82" y="323" width="250" height="250"/>
@@ -104,12 +93,20 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="SHS-Wv-MTA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Lt-gz-fsd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g4D-Kl-Uqq" secondAttribute="bottom" id="7c7-nw-qJ2"/>
+                <constraint firstAttribute="bottom" secondItem="g4D-Kl-Uqq" secondAttribute="bottom" id="7c7-nw-qJ2"/>
                 <constraint firstItem="g4D-Kl-Uqq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BXy-BS-htb"/>
                 <constraint firstItem="g4D-Kl-Uqq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hKn-Wn-S55"/>
                 <constraint firstItem="SHS-Wv-MTA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tyi-JR-dK3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g4D-Kl-Uqq" secondAttribute="trailing" id="x4T-T7-fg7"/>
             </constraints>
+            <connections>
+                <outlet property="circleA" destination="zE2-LB-tHj" id="pWb-wn-yEq"/>
+                <outlet property="circleB" destination="S5O-X5-ibG" id="Ump-kY-SyK"/>
+                <outlet property="circleC" destination="Xy4-jR-zAq" id="aON-pE-Bi4"/>
+                <outlet property="circleD" destination="0zP-y9-GEE" id="KVk-Kd-V8f"/>
+                <outlet property="containerView" destination="gKi-P2-bgl" id="8vl-RY-lgt"/>
+                <outlet property="loadingView" destination="g4D-Kl-Uqq" id="Vhr-uk-yKZ"/>
+            </connections>
             <point key="canvasLocation" x="133.33333333333334" y="316.07142857142856"/>
         </view>
     </objects>
