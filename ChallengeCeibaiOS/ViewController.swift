@@ -17,13 +17,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startAnimation()
+        setupAnimation()
      }
     
-    func startAnimation() {
+    func setupAnimation() {
         finishAnimation()
         self.view.addSubview(startLoading)
-        setConstraints(forView: startLoading, toView: self.view)
+        startLoading.setConstraints(forView: startLoading, toView: self.view)
         startLoading.starAnimation()
     }
     
@@ -31,14 +31,6 @@ class ViewController: UIViewController {
         startLoading.finishAnimation()
         startLoading.removeFromSuperview()
     }
-
-    private func setConstraints(forView view: UIView,toView:UIView) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: toView, attribute: .top, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: toView, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .left, relatedBy: .equal, toItem: toView, attribute: .left, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .right, relatedBy: .equal, toItem: toView, attribute: .right, multiplier: 1, constant: 0).isActive = true
-    }
-
+    
 }
 
