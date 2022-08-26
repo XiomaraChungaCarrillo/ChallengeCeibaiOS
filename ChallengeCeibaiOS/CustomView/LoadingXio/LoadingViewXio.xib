@@ -85,7 +85,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.10402741391434632" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="250" id="7hD-U5-xls"/>
                         <constraint firstAttribute="bottom" secondItem="J33-vv-tHx" secondAttribute="bottom" constant="20" id="EsX-XI-kDC"/>
