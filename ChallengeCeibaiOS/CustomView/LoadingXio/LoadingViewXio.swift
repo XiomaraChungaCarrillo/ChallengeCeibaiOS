@@ -48,6 +48,7 @@ class LoadingViewXio: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUpCircles()
     }
     
     func starAnimation(){
@@ -70,17 +71,18 @@ extension LoadingViewXio {
         circles.forEach { circle in
             circle.layer.cornerRadius = circle.frame.height / 2
             circle.backgroundColor = .clear
-            circle.isUserInteractionEnabled = false }}
+            circle.isUserInteractionEnabled = false
+        }
+    }
     
     
     func blurView(completion: @escaping (_ success: Bool) -> ()) {
         
         if !UIAccessibility.isReduceTransparencyEnabled {
-//            loadingView.backgroundColor = #colorLiteral(red: 0.01176470588, green: 0.03137254902, blue: 0.1843137255, alpha: 1)
-//            loadingView.addSubview(blurry)
-//            loadingView.bringSubviewToFront(blurry)
+            loadingView.addSubview(blurry)
+            loadingView.bringSubviewToFront(blurry)
             loadingView.bringSubviewToFront(containerView)
-//            loadingView.backgroundColor = #colorLiteral(red: 0.01176470588, green: 0.03137254902, blue: 0.1843137255, alpha: 1)
+            loadingView.backgroundColor = #colorLiteral(red: 0.01176470588, green: 0.03137254902, blue: 0.1843137255, alpha: 1)
             UIView.animate(withDuration: 0.6) {
                 self.blurry.alpha = 0.5
                 completion(true) }

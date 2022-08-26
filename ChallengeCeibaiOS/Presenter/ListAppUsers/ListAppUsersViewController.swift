@@ -1,17 +1,14 @@
 //
-//  ViewController.swift
+//  ListAppUsersViewController.swift
 //  ChallengeCeibaiOS
 //
-//  Created by Xio iOS on 25/08/22.
+//  Created by Xio iOS on 26/08/22.
 //
 
 import UIKit
- 
-class ViewController: UIViewController {
-    
-    
- 
-    @IBOutlet weak var viewTest: UIView!
+
+class ListAppUsersViewController: UIViewController {
+
     
     private let startLoading = UINib(nibName: "LoadingViewXio", bundle: nil).instantiate(withOwner: self, options: nil).first as! LoadingViewXio
     
@@ -31,6 +28,5 @@ class ViewController: UIViewController {
         startLoading.finishAnimation()
         startLoading.removeFromSuperview()
     }
-    
-}
 
+}
