@@ -14,7 +14,9 @@
                 <outlet property="circleC" destination="Xy4-jR-zAq" id="DQz-PL-Nph"/>
                 <outlet property="circleD" destination="0zP-y9-GEE" id="ag4-3C-oV0"/>
                 <outlet property="containerView" destination="gKi-P2-bgl" id="9zw-nb-xtr"/>
+                <outlet property="heighLoading" destination="7hD-U5-xls" id="Fr3-GH-kIm"/>
                 <outlet property="loadingView" destination="SHS-Wv-MTA" id="Exq-yb-i8S"/>
+                <outlet property="widthLoading" destination="KKj-IO-hy0" id="f7z-HR-AwW"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -85,8 +87,10 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="250" id="7hD-U5-xls"/>
                         <constraint firstAttribute="bottom" secondItem="J33-vv-tHx" secondAttribute="bottom" constant="20" id="EsX-XI-kDC"/>
                         <constraint firstItem="gKi-P2-bgl" firstAttribute="centerX" secondItem="SHS-Wv-MTA" secondAttribute="centerX" id="HXE-s6-hGh"/>
+                        <constraint firstAttribute="width" constant="250" id="KKj-IO-hy0"/>
                         <constraint firstItem="gKi-P2-bgl" firstAttribute="top" secondItem="SHS-Wv-MTA" secondAttribute="top" constant="65" id="bIN-Xo-GcT"/>
                         <constraint firstItem="J33-vv-tHx" firstAttribute="centerX" secondItem="SHS-Wv-MTA" secondAttribute="centerX" id="ysn-Kp-sjI"/>
                     </constraints>

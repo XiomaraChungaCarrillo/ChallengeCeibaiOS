@@ -10,13 +10,15 @@ import UIKit
 class ViewController: UIViewController {
     
   
-
+    @IBOutlet weak var LoadingViewprueba: LoadingViewXio!
+    
 
     
  
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoadingViewprueba.isHidden = true
         // Do any additional setup after loading the view.
          //color, number of circles, duration, growColor.
      }
