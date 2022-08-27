@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BRSonoma-Bold.ttf">
+            <string>BRSonoma-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XioButtonView" customModule="ChallengeCeibaiOS" customModuleProvider="target">
+            <connections>
+                <outlet property="cardView" destination="QSu-do-eZB" id="a3Y-JX-xhq"/>
+                <outlet property="title" destination="BR6-vX-95z" id="LpW-MQ-gST"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="8Li-hk-56B">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSu-do-eZB" customClass="CardViewButton" customModule="ChallengeCeibaiOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="EQU-aY-De2"/>
+                        <constraint firstAttribute="width" constant="120" id="oEo-1B-IL4"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.40000000000000002"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.15686274510000001" green="0.20000000000000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M8i-f0-LQO">
+                    <rect key="frame" x="48" y="10" width="24.5" height="12"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BR6-vX-95z">
+                            <rect key="frame" x="0.0" y="0.0" width="24.5" height="12"/>
+                            <fontDescription key="fontDescription" name="BRSonoma-Bold" family="BR Sonoma" pointSize="10"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Axk-U7-3an"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="M8i-f0-LQO" firstAttribute="centerY" secondItem="8Li-hk-56B" secondAttribute="centerY" id="5fO-SF-Oz2"/>
+                <constraint firstItem="Axk-U7-3an" firstAttribute="trailing" secondItem="QSu-do-eZB" secondAttribute="trailing" id="8P2-sI-9fj"/>
+                <constraint firstItem="M8i-f0-LQO" firstAttribute="centerX" secondItem="8Li-hk-56B" secondAttribute="centerX" id="Cne-mf-6sM"/>
+                <constraint firstItem="QSu-do-eZB" firstAttribute="leading" secondItem="Axk-U7-3an" secondAttribute="leading" id="QAj-Os-Jyl"/>
+                <constraint firstItem="QSu-do-eZB" firstAttribute="top" secondItem="8Li-hk-56B" secondAttribute="top" id="UtM-bI-hUa"/>
+                <constraint firstItem="Axk-U7-3an" firstAttribute="bottom" secondItem="QSu-do-eZB" secondAttribute="bottom" id="chh-M1-Jj1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="140.625"/>
+        </view>
+    </objects>
+</document>

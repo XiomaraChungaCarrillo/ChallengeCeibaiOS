@@ -24,6 +24,10 @@
 		EEA701BB28BAA2B300688C2E /* UserPublicationCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701BA28BAA2B300688C2E /* UserPublicationCells.swift */; };
 		EEA701BD28BAA35000688C2E /* PublicationUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701BC28BAA35000688C2E /* PublicationUserModel.swift */; };
 		EEA701C128BAA4F700688C2E /* UserPublicationCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA701C028BAA4F700688C2E /* UserPublicationCells.xib */; };
+		EEA701C328BACCEA00688C2E /* CardViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701C228BACCEA00688C2E /* CardViewButton.swift */; };
+		EEA701C628BACD2600688C2E /* XioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701C528BACD2600688C2E /* XioButtonView.swift */; };
+		EEA701C828BACD3400688C2E /* XioButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA701C728BACD3400688C2E /* XioButtonView.xib */; };
+		EEA701CB28BACDC400688C2E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701CA28BACDC400688C2E /* Extensions.swift */; };
 		EEE875D528B8371300DC1742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D428B8371300DC1742 /* AppDelegate.swift */; };
 		EEE875D728B8371300DC1742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D628B8371300DC1742 /* SceneDelegate.swift */; };
 		EEE875DC28B8371300DC1742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE875DA28B8371300DC1742 /* Main.storyboard */; };
@@ -53,6 +57,10 @@
 		EEA701BA28BAA2B300688C2E /* UserPublicationCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublicationCells.swift; sourceTree = "<group>"; };
 		EEA701BC28BAA35000688C2E /* PublicationUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationUserModel.swift; sourceTree = "<group>"; };
 		EEA701C028BAA4F700688C2E /* UserPublicationCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPublicationCells.xib; sourceTree = "<group>"; };
+		EEA701C228BACCEA00688C2E /* CardViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewButton.swift; sourceTree = "<group>"; };
+		EEA701C528BACD2600688C2E /* XioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XioButtonView.swift; sourceTree = "<group>"; };
+		EEA701C728BACD3400688C2E /* XioButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XioButtonView.xib; sourceTree = "<group>"; };
+		EEA701CA28BACDC400688C2E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EEE875D128B8371300DC1742 /* ChallengeCeibaiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeCeibaiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE875D428B8371300DC1742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE875D628B8371300DC1742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +202,15 @@
 			path = PublicationsModel;
 			sourceTree = "<group>";
 		};
+		EEA701C428BACD0300688C2E /* XioButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				EEA701C528BACD2600688C2E /* XioButtonView.swift */,
+				EEA701C728BACD3400688C2E /* XioButtonView.xib */,
+			);
+			path = XioButtonView;
+			sourceTree = "<group>";
+		};
 		EEE875C828B8371300DC1742 = {
 			isa = PBXGroup;
 			children = (
@@ -231,8 +248,11 @@
 		EEE875E828B8482500DC1742 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				EEE875E928B8483200DC1742 /* LoadingXio */,
+				EEA701C228BACCEA00688C2E /* CardViewButton.swift */,
 				EE9C2ECA28B993D000FB063F /* CustomView.swift */,
+				EEA701C428BACD0300688C2E /* XioButtonView */,
+				EEE875E928B8483200DC1742 /* LoadingXio */,
+				EEA701CA28BACDC400688C2E /* Extensions.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -312,6 +332,7 @@
 				EEE875DE28B8371400DC1742 /* Assets.xcassets in Resources */,
 				EEE875DC28B8371300DC1742 /* Main.storyboard in Resources */,
 				EEA701C128BAA4F700688C2E /* UserPublicationCells.xib in Resources */,
+				EEA701C828BACD3400688C2E /* XioButtonView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,12 +393,15 @@
 				EEE875D528B8371300DC1742 /* AppDelegate.swift in Sources */,
 				EE9C2EC528B98E9600FB063F /* APICeiba.swift in Sources */,
 				EE9C2EDE28BA7EEC00FB063F /* BaseViewController.swift in Sources */,
+				EEA701C628BACD2600688C2E /* XioButtonView.swift in Sources */,
 				EE9C2EDA28B996E400FB063F /* ListAppUsersService.swift in Sources */,
 				EE9C2ECB28B993D000FB063F /* CustomView.swift in Sources */,
 				EE9C2ED528B9967800FB063F /* LocationDetailsModel.swift in Sources */,
 				EE9C2ECE28B995F300FB063F /* UsersCells.swift in Sources */,
 				EE9C2ED328B9965F00FB063F /* UserInventoryModel.swift in Sources */,
 				EE9C2EC928B9922700FB063F /* APIsEndPoint.swift in Sources */,
+				EEA701CB28BACDC400688C2E /* Extensions.swift in Sources */,
+				EEA701C328BACCEA00688C2E /* CardViewButton.swift in Sources */,
 				EEE875D728B8371300DC1742 /* SceneDelegate.swift in Sources */,
 				EE9C2EC228B98C1000FB063F /* ListAppUsersViewController.swift in Sources */,
 				EEA701BD28BAA35000688C2E /* PublicationUserModel.swift in Sources */,

@@ -87,6 +87,7 @@ extension LoadingViewXio {
             loadingView.addSubview(blurry)
             loadingView.bringSubviewToFront(blurry)
             loadingView.bringSubviewToFront(containerView)
+            loadingView.cornerRadius = 125
             UIView.animate(withDuration: 0.6) {
                 self.blurry.alpha = 0.5
                 completion(true) }
