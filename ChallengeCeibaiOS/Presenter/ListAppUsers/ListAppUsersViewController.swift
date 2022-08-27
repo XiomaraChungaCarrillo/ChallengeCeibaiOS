@@ -48,6 +48,7 @@ extension ListAppUsersViewController {
 extension ListAppUsersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return listUser?.count ?? Int()
     }
     
@@ -69,6 +70,7 @@ extension ListAppUsersViewController: UITableViewDataSource {
 extension ListAppUsersViewController {
     
     func loadListUsers() {
+        
         initStarAnimation()
         service.loadingUsersList { [weak self] responseData in
             guard let self = self else { return }

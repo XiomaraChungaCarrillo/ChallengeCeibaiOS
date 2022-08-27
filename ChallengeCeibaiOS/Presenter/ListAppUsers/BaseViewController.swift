@@ -10,7 +10,7 @@ import UIKit
 // MARK: - SetupLoadingView
 class BaseViewController: UIViewController {
     
-    private let startLoading = UINib(nibName: LoadingViewXio.viewIdCell, bundle: nil).instantiate(withOwner: self, options: nil).first as! LoadingViewXio
+    private let startLoading = UINib(nibName: LoadingViewXio.viewIdCell, bundle: nil).instantiate(withOwner: BaseViewController.self, options: nil).first as! LoadingViewXio
 
     func initStarAnimation() {
         finishAnimation()
