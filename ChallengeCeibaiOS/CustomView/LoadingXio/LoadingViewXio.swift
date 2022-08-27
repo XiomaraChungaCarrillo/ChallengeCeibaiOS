@@ -84,8 +84,8 @@ extension LoadingViewXio {
     func blurView(completion: @escaping (_ success: Bool) -> ()) {
         
         if !UIAccessibility.isReduceTransparencyEnabled {
-            loadingView.addSubview(blurry)
-            loadingView.bringSubviewToFront(blurry)
+//            loadingView.addSubview(blurry)
+//            loadingView.bringSubviewToFront(blurry)
             loadingView.bringSubviewToFront(containerView)
             loadingView.cornerRadius = 125
             UIView.animate(withDuration: 0.6) {

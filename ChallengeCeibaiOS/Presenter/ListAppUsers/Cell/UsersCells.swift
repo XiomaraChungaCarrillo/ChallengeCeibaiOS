@@ -19,7 +19,7 @@ class UsersCells: UITableViewCell {
     
     @IBOutlet weak var cardView: CardViewButton!
     
-     var color: UIColor = #colorLiteral(red: 0.0397044532, green: 0.01789819822, blue: 0.1158874109, alpha: 1)
+     var color: UIColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 0.5)
      var cornerRadiusButton: CGFloat = 20
 
     

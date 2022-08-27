@@ -12,7 +12,7 @@ class XioButtonView: UIButton {
     
     weak var insideview:UIView?
     
-    @IBInspectable var color: UIColor = #colorLiteral(red: 0.0397044532, green: 0.01789819822, blue: 0.1158874109, alpha: 1)
+    @IBInspectable var color: UIColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 0.5)
     @IBInspectable var cornerRadiusButton: CGFloat = 20
     @IBInspectable var text: String = String()
     
