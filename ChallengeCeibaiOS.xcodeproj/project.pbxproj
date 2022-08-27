@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		C60D953FFEA5FB07A15514A1 /* Pods_ChallengeCeibaiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599D6B011646E43C363C24E5 /* Pods_ChallengeCeibaiOS.framework */; };
 		EE9C2EC228B98C1000FB063F /* ListAppUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2EC128B98C1000FB063F /* ListAppUsersViewController.swift */; };
+		EE9C2EC528B98E9600FB063F /* APICeiba.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2EC428B98E9600FB063F /* APICeiba.swift */; };
+		EE9C2EC928B9922700FB063F /* APIsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2EC828B9922700FB063F /* APIsEndPoint.swift */; };
+		EE9C2ECB28B993D000FB063F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2ECA28B993D000FB063F /* CustomView.swift */; };
+		EE9C2ECE28B995F300FB063F /* UsersCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2ECD28B995F300FB063F /* UsersCells.swift */; };
+		EE9C2ED028B995FA00FB063F /* UsersCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9C2ECF28B995FA00FB063F /* UsersCells.xib */; };
+		EE9C2ED328B9965F00FB063F /* UserInventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2ED228B9965F00FB063F /* UserInventoryModel.swift */; };
+		EE9C2ED528B9967800FB063F /* LocationDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2ED428B9967800FB063F /* LocationDetailsModel.swift */; };
+		EE9C2ED728B9968B00FB063F /* CompanyPropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2ED628B9968B00FB063F /* CompanyPropertiesModel.swift */; };
+		EE9C2EDA28B996E400FB063F /* ListAppUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2ED928B996E400FB063F /* ListAppUsersService.swift */; };
+		EE9C2EDC28B9E7D500FB063F /* DetailLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2EDB28B9E7D500FB063F /* DetailLocationModel.swift */; };
+		EE9C2EDE28BA7EEC00FB063F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C2EDD28BA7EEC00FB063F /* BaseViewController.swift */; };
 		EEE875D528B8371300DC1742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D428B8371300DC1742 /* AppDelegate.swift */; };
 		EEE875D728B8371300DC1742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D628B8371300DC1742 /* SceneDelegate.swift */; };
 		EEE875DC28B8371300DC1742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE875DA28B8371300DC1742 /* Main.storyboard */; };
@@ -23,6 +34,17 @@
 		9AE0ADD4CF54D590ACA9A8CF /* Pods-ChallengeCeibaiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeCeibaiOS.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeCeibaiOS/Pods-ChallengeCeibaiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CF30C216219321304D77317C /* Pods-ChallengeCeibaiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeCeibaiOS.release.xcconfig"; path = "Target Support Files/Pods-ChallengeCeibaiOS/Pods-ChallengeCeibaiOS.release.xcconfig"; sourceTree = "<group>"; };
 		EE9C2EC128B98C1000FB063F /* ListAppUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppUsersViewController.swift; sourceTree = "<group>"; };
+		EE9C2EC428B98E9600FB063F /* APICeiba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICeiba.swift; sourceTree = "<group>"; };
+		EE9C2EC828B9922700FB063F /* APIsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIsEndPoint.swift; sourceTree = "<group>"; };
+		EE9C2ECA28B993D000FB063F /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		EE9C2ECD28B995F300FB063F /* UsersCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCells.swift; sourceTree = "<group>"; };
+		EE9C2ECF28B995FA00FB063F /* UsersCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersCells.xib; sourceTree = "<group>"; };
+		EE9C2ED228B9965F00FB063F /* UserInventoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInventoryModel.swift; sourceTree = "<group>"; };
+		EE9C2ED428B9967800FB063F /* LocationDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsModel.swift; sourceTree = "<group>"; };
+		EE9C2ED628B9968B00FB063F /* CompanyPropertiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyPropertiesModel.swift; sourceTree = "<group>"; };
+		EE9C2ED928B996E400FB063F /* ListAppUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppUsersService.swift; sourceTree = "<group>"; };
+		EE9C2EDB28B9E7D500FB063F /* DetailLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationModel.swift; sourceTree = "<group>"; };
+		EE9C2EDD28BA7EEC00FB063F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EEE875D128B8371300DC1742 /* ChallengeCeibaiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeCeibaiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE875D428B8371300DC1742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE875D628B8371300DC1742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +88,9 @@
 		EE9B7DDF28B9891C00CFF601 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				EE9C2ED828B996D900FB063F /* Service */,
+				EE9C2ED128B9965100FB063F /* Model */,
+				EE9C2ECC28B995E600FB063F /* Cell */,
 				EE9B7DE028B9893E00CFF601 /* ListAppUsers */,
 			);
 			path = Presenter;
@@ -75,8 +100,46 @@
 			isa = PBXGroup;
 			children = (
 				EE9C2EC128B98C1000FB063F /* ListAppUsersViewController.swift */,
+				EE9C2EDD28BA7EEC00FB063F /* BaseViewController.swift */,
 			);
 			path = ListAppUsers;
+			sourceTree = "<group>";
+		};
+		EE9C2EC328B98E7000FB063F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EE9C2EC428B98E9600FB063F /* APICeiba.swift */,
+				EE9C2EC828B9922700FB063F /* APIsEndPoint.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EE9C2ECC28B995E600FB063F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE9C2ECD28B995F300FB063F /* UsersCells.swift */,
+				EE9C2ECF28B995FA00FB063F /* UsersCells.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EE9C2ED128B9965100FB063F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE9C2ED228B9965F00FB063F /* UserInventoryModel.swift */,
+				EE9C2ED428B9967800FB063F /* LocationDetailsModel.swift */,
+				EE9C2ED628B9968B00FB063F /* CompanyPropertiesModel.swift */,
+				EE9C2EDB28B9E7D500FB063F /* DetailLocationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE9C2ED828B996D900FB063F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EE9C2ED928B996E400FB063F /* ListAppUsersService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		EEE875C828B8371300DC1742 = {
@@ -100,8 +163,9 @@
 		EEE875D328B8371300DC1742 /* ChallengeCeibaiOS */ = {
 			isa = PBXGroup;
 			children = (
-				EE9B7DDF28B9891C00CFF601 /* Presenter */,
 				EEE875E828B8482500DC1742 /* CustomView */,
+				EE9C2EC328B98E7000FB063F /* API */,
+				EE9B7DDF28B9891C00CFF601 /* Presenter */,
 				EEE875D428B8371300DC1742 /* AppDelegate.swift */,
 				EEE875D628B8371300DC1742 /* SceneDelegate.swift */,
 				EEE875DA28B8371300DC1742 /* Main.storyboard */,
@@ -116,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE875E928B8483200DC1742 /* LoadingXio */,
+				EE9C2ECA28B993D000FB063F /* CustomView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -189,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9C2ED028B995FA00FB063F /* UsersCells.xib in Resources */,
 				EEE875ED28B8486C00DC1742 /* LoadingViewXio.xib in Resources */,
 				EEE875E128B8371400DC1742 /* LaunchScreen.storyboard in Resources */,
 				EEE875DE28B8371400DC1742 /* Assets.xcassets in Resources */,
@@ -245,8 +311,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9C2EDC28B9E7D500FB063F /* DetailLocationModel.swift in Sources */,
 				EEE875EB28B8485D00DC1742 /* LoadingViewXio.swift in Sources */,
+				EE9C2ED728B9968B00FB063F /* CompanyPropertiesModel.swift in Sources */,
 				EEE875D528B8371300DC1742 /* AppDelegate.swift in Sources */,
+				EE9C2EC528B98E9600FB063F /* APICeiba.swift in Sources */,
+				EE9C2EDE28BA7EEC00FB063F /* BaseViewController.swift in Sources */,
+				EE9C2EDA28B996E400FB063F /* ListAppUsersService.swift in Sources */,
+				EE9C2ECB28B993D000FB063F /* CustomView.swift in Sources */,
+				EE9C2ED528B9967800FB063F /* LocationDetailsModel.swift in Sources */,
+				EE9C2ECE28B995F300FB063F /* UsersCells.swift in Sources */,
+				EE9C2ED328B9965F00FB063F /* UserInventoryModel.swift in Sources */,
+				EE9C2EC928B9922700FB063F /* APIsEndPoint.swift in Sources */,
 				EEE875D728B8371300DC1742 /* SceneDelegate.swift in Sources */,
 				EE9C2EC228B98C1000FB063F /* ListAppUsersViewController.swift in Sources */,
 			);

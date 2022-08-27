@@ -7,26 +7,74 @@
 
 import UIKit
 
-class ListAppUsersViewController: UIViewController {
-
+class ListAppUsersViewController: BaseViewController {
     
-    private let startLoading = UINib(nibName: "LoadingViewXio", bundle: nil).instantiate(withOwner: self, options: nil).first as! LoadingViewXio
+    private let service =  ListAppUsersService()
+    private var listUser: [UserInventoryModel]?
+    
+    @IBOutlet weak var tableViewListUser: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAnimation()
+        setupTablewView()
+        getDataUser()
      }
     
-    func setupAnimation() {
-        finishAnimation()
-        self.view.addSubview(startLoading)
-        startLoading.setConstraints(forView: startLoading, toView: self.view)
-        startLoading.starAnimation()
+}
+
+// MARK: - Getting User Data
+extension ListAppUsersViewController {
+    
+    func getDataUser() {
+        loadListUsers()
+        reloadData()
+    }
+}
+
+// MARK: - ConfigTableView
+extension ListAppUsersViewController {
+    
+    func reloadData() {
+        tableViewListUser.reloadData()
     }
     
-    func finishAnimation() {
-        startLoading.finishAnimation()
-        startLoading.removeFromSuperview()
+    func setupTablewView() {
+        tableViewListUser.register(UINib(nibName: UsersCells.viewIdCell, bundle: .main), forCellReuseIdentifier: UsersCells.viewIdCell)
     }
+    
+}
 
+// MARK: - SetupDataSource
+extension ListAppUsersViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listUser?.count ?? Int()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: UsersCells.viewIdCell, for: indexPath)
+        
+        cell.selectionStyle = .none
+
+        if let cell = cell as? UsersCells , let listUsersArray = listUser {
+            cell.setupItemsUserCell(with: listUsersArray[indexPath.row])
+        }
+
+        return cell
+    }
+}
+
+// MARK: - Service Request
+extension ListAppUsersViewController {
+    
+    func loadListUsers() {
+        initStarAnimation()
+        service.loadingUsersList { [weak self] responseData in
+            guard let self = self else { return }
+            self.listUser = responseData
+            self.reloadData()
+            self.finishAnimation()
+        }
+    }
 }

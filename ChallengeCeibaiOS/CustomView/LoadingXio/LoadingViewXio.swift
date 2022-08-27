@@ -10,6 +10,7 @@ import UIKit
 protocol CustomLoadingViewwDelegate: class {
     func startAnimation()
     func finishAnimation()
+    func setConstraints(forView view: UIView,toView:UIView)
 }
 
 
@@ -60,6 +61,14 @@ class LoadingViewXio: UIView {
         loading = false
         setupLoadingView()
     }
+    
+    func setConstraints(forView view: UIView,toView:UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: toView, attribute: .top, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: toView, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: view, attribute: .left, relatedBy: .equal, toItem: toView, attribute: .left, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: view, attribute: .right, relatedBy: .equal, toItem: toView, attribute: .right, multiplier: 1, constant: 0).isActive = true
+    }
 }
 
 //MARK: - SetupLoading
@@ -82,7 +91,7 @@ extension LoadingViewXio {
             loadingView.addSubview(blurry)
             loadingView.bringSubviewToFront(blurry)
             loadingView.bringSubviewToFront(containerView)
-            loadingView.backgroundColor = #colorLiteral(red: 0.01176470588, green: 0.03137254902, blue: 0.1843137255, alpha: 1)
+            loadingView.backgroundColor = #colorLiteral(red: 0.009867615998, green: 0.04416970164, blue: 0.2421548069, alpha: 1).withAlphaComponent(0.4)
             UIView.animate(withDuration: 0.6) {
                 self.blurry.alpha = 0.5
                 completion(true) }
@@ -119,14 +128,4 @@ extension LoadingViewXio {
                 blurry.removeFromSuperview() }
         }
     }
-    
-    func setConstraints(forView view: UIView,toView:UIView) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: toView, attribute: .top, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: toView, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .left, relatedBy: .equal, toItem: toView, attribute: .left, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .right, relatedBy: .equal, toItem: toView, attribute: .right, multiplier: 1, constant: 0).isActive = true
-    }
-
-    
 }
