@@ -105,7 +105,7 @@
                 <outlet property="circleC" destination="Xy4-jR-zAq" id="aON-pE-Bi4"/>
                 <outlet property="circleD" destination="0zP-y9-GEE" id="KVk-Kd-V8f"/>
                 <outlet property="containerView" destination="gKi-P2-bgl" id="8vl-RY-lgt"/>
-                <outlet property="loadingView" destination="g4D-Kl-Uqq" id="Vhr-uk-yKZ"/>
+                <outlet property="loadingView" destination="SHS-Wv-MTA" id="bgm-eH-p5t"/>
             </connections>
             <point key="canvasLocation" x="133.33333333333334" y="316.07142857142856"/>
         </view>

@@ -10,7 +10,6 @@ import UIKit
 protocol CustomLoadingViewwDelegate: class {
     func startAnimation()
     func finishAnimation()
-    func setConstraints(forView view: UIView,toView:UIView)
 }
 
 
@@ -27,7 +26,6 @@ class LoadingViewXio: UIView {
     
     weak var delegate: CustomLoadingViewwDelegate?
 
-    
     //MARK: Loading Properties
     var heightNumberLoading: Int = 250
     var widthNumberLoading: Int = 250
@@ -50,25 +48,23 @@ class LoadingViewXio: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpCircles()
+        loading = true
+        setupLoadingView()
     }
     
     func starAnimation(){
+        
         loading = true
         setupLoadingView()
     }
 
     func finishAnimation(){
+        
         loading = false
         setupLoadingView()
     }
     
-    func setConstraints(forView view: UIView,toView:UIView) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: toView, attribute: .top, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: toView, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .left, relatedBy: .equal, toItem: toView, attribute: .left, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: view, attribute: .right, relatedBy: .equal, toItem: toView, attribute: .right, multiplier: 1, constant: 0).isActive = true
-    }
+    
 }
 
 //MARK: - SetupLoading
@@ -91,7 +87,6 @@ extension LoadingViewXio {
             loadingView.addSubview(blurry)
             loadingView.bringSubviewToFront(blurry)
             loadingView.bringSubviewToFront(containerView)
-            loadingView.backgroundColor = #colorLiteral(red: 0.009867615998, green: 0.04416970164, blue: 0.2421548069, alpha: 1).withAlphaComponent(0.4)
             UIView.animate(withDuration: 0.6) {
                 self.blurry.alpha = 0.5
                 completion(true) }

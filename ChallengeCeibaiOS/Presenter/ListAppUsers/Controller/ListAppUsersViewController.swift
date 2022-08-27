@@ -9,7 +9,7 @@ import UIKit
 
 class ListAppUsersViewController: BaseViewController {
     
-    private let service =  ListAppUsersService()
+    private let ceibaService =  ListAppUsersService()
     private var listUser: [UserInventoryModel]?
     
     @IBOutlet weak var tableViewListUser: UITableView!
@@ -60,6 +60,8 @@ extension ListAppUsersViewController: UITableViewDataSource {
 
         if let cell = cell as? UsersCells , let listUsersArray = listUser {
             cell.setupItemsUserCell(with: listUsersArray[indexPath.row])
+            cell.userPublications.addTarget(.none, action: #selector(self.showPublicationsButton(_:)), for: .touchUpInside)
+            cell.userPublications.tag = listUsersArray[indexPath.row].id ?? Int()
         }
 
         return cell
@@ -72,11 +74,42 @@ extension ListAppUsersViewController {
     func loadListUsers() {
         
         initStarAnimation()
-        service.loadingUsersList { [weak self] responseData in
+        ceibaService.loadingUsersList { [weak self] decodedUsersData in
             guard let self = self else { return }
-            self.listUser = responseData
-            self.reloadData()
-            self.finishAnimation()
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+                self.finishAnimation()
+                self.listUser = decodedUsersData
+                self.reloadData()
+            }
         }
+    }
+    
+    
+}
+
+// MARK: - Configurating Action Button
+extension ListAppUsersViewController {
+    
+    @objc func showPublicationsButton(_ positionID: UIButton){
+        uploadUserPublications(positionID.tag)
+    }
+    
+    func uploadUserPublications(_ userID: Int) {
+        initStarAnimation()
+        ceibaService.loadingUserPublications(userID) { [weak self] decodedPublicationsData in
+            guard let self = self else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+                self.goToUserPublicationsController(decodedPublicationsData)
+                self.finishAnimation()
+            }
+        }
+    }
+    
+    func goToUserPublicationsController(_ publicationsUser: [PublicationUserModel]) {
+        let ScreenView = UIStoryboard(name: "Main", bundle: nil)
+        guard let validationUserViewController = ScreenView.instantiateViewController(withIdentifier: "UserPublicationsListViewController") as? UserPublicationsListViewController else { return  }
+        validationUserViewController.hidesBottomBarWhenPushed = true
+        validationUserViewController.usersPublications = publicationsUser
+        self.navigationController?.pushViewController(validationUserViewController, animated: true)
     }
 }

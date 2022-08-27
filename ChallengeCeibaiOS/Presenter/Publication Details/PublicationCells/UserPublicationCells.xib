@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S9X-un-34A" customClass="UserPublicationCells" customModule="ChallengeCeibaiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S9X-un-34A" id="ipR-3E-rrW">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingImageUnicorn" translatesAutoresizingMaskIntoConstraints="NO" id="Z3l-qb-gid">
+                        <rect key="frame" x="16" y="16" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="0Aq-Fe-RfR"/>
+                            <constraint firstAttribute="height" constant="80" id="KYJ-Zf-Ev5"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="20b-v8-T2h">
+                        <rect key="frame" x="101" y="16" width="214" height="51"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-3e-HWs">
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfl-y4-K2r">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IP-Co-4eY">
+                                        <rect key="frame" x="0.0" y="30.5" width="214" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Z3l-qb-gid" secondAttribute="bottom" constant="16" id="Gcl-FN-ku5"/>
+                    <constraint firstItem="20b-v8-T2h" firstAttribute="top" secondItem="Z3l-qb-gid" secondAttribute="top" id="Maf-qv-9gn"/>
+                    <constraint firstItem="20b-v8-T2h" firstAttribute="leading" secondItem="Z3l-qb-gid" secondAttribute="trailing" constant="5" id="czz-E3-qQB"/>
+                    <constraint firstItem="Z3l-qb-gid" firstAttribute="leading" secondItem="ipR-3E-rrW" secondAttribute="leading" constant="16" id="g1n-jO-TrK"/>
+                    <constraint firstAttribute="trailing" secondItem="20b-v8-T2h" secondAttribute="trailing" constant="5" id="qUx-7t-QqM"/>
+                    <constraint firstItem="Z3l-qb-gid" firstAttribute="top" secondItem="ipR-3E-rrW" secondAttribute="top" constant="16" id="zDl-Od-0eG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="a7j-ap-Peq"/>
+            <connections>
+                <outlet property="descriptionOfPublication" destination="5IP-Co-4eY" id="KvX-gH-b97"/>
+                <outlet property="titleOfPublication" destination="rfl-y4-K2r" id="kxs-36-9CA"/>
+                <outlet property="userImage" destination="Z3l-qb-gid" id="ajH-JH-aYq"/>
+            </connections>
+            <point key="canvasLocation" x="-217" y="-5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="loadingImageUnicorn" width="838" height="772"/>
+    </resources>
+</document>

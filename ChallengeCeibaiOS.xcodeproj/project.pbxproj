@@ -23,7 +23,7 @@
 		EEA701B928BAA24A00688C2E /* UserPublicationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701B828BAA24A00688C2E /* UserPublicationsListViewController.swift */; };
 		EEA701BB28BAA2B300688C2E /* UserPublicationCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701BA28BAA2B300688C2E /* UserPublicationCells.swift */; };
 		EEA701BD28BAA35000688C2E /* PublicationUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701BC28BAA35000688C2E /* PublicationUserModel.swift */; };
-		EEA701BF28BAA45400688C2E /* PublicationUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA701BE28BAA45400688C2E /* PublicationUserService.swift */; };
+		EEA701C128BAA4F700688C2E /* UserPublicationCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA701C028BAA4F700688C2E /* UserPublicationCells.xib */; };
 		EEE875D528B8371300DC1742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D428B8371300DC1742 /* AppDelegate.swift */; };
 		EEE875D728B8371300DC1742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE875D628B8371300DC1742 /* SceneDelegate.swift */; };
 		EEE875DC28B8371300DC1742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE875DA28B8371300DC1742 /* Main.storyboard */; };
@@ -52,7 +52,7 @@
 		EEA701B828BAA24A00688C2E /* UserPublicationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublicationsListViewController.swift; sourceTree = "<group>"; };
 		EEA701BA28BAA2B300688C2E /* UserPublicationCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPublicationCells.swift; sourceTree = "<group>"; };
 		EEA701BC28BAA35000688C2E /* PublicationUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationUserModel.swift; sourceTree = "<group>"; };
-		EEA701BE28BAA45400688C2E /* PublicationUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationUserService.swift; sourceTree = "<group>"; };
+		EEA701C028BAA4F700688C2E /* UserPublicationCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPublicationCells.xib; sourceTree = "<group>"; };
 		EEE875D128B8371300DC1742 /* ChallengeCeibaiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeCeibaiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE875D428B8371300DC1742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE875D628B8371300DC1742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,7 +154,6 @@
 		EE9C2EDF28BA814300FB063F /* Publication Details */ = {
 			isa = PBXGroup;
 			children = (
-				EE9C2EE428BA829100FB063F /* PublicationService */,
 				EE9C2EE328BA828D00FB063F /* PublicationsModel */,
 				EE9C2EE228BA828900FB063F /* PublicationCells */,
 				EE9C2EE128BA827D00FB063F /* Controller */,
@@ -182,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA701BA28BAA2B300688C2E /* UserPublicationCells.swift */,
+				EEA701C028BAA4F700688C2E /* UserPublicationCells.xib */,
 			);
 			path = PublicationCells;
 			sourceTree = "<group>";
@@ -192,14 +192,6 @@
 				EEA701BC28BAA35000688C2E /* PublicationUserModel.swift */,
 			);
 			path = PublicationsModel;
-			sourceTree = "<group>";
-		};
-		EE9C2EE428BA829100FB063F /* PublicationService */ = {
-			isa = PBXGroup;
-			children = (
-				EEA701BE28BAA45400688C2E /* PublicationUserService.swift */,
-			);
-			path = PublicationService;
 			sourceTree = "<group>";
 		};
 		EEE875C828B8371300DC1742 = {
@@ -319,6 +311,7 @@
 				EEE875E128B8371400DC1742 /* LaunchScreen.storyboard in Resources */,
 				EEE875DE28B8371400DC1742 /* Assets.xcassets in Resources */,
 				EEE875DC28B8371300DC1742 /* Main.storyboard in Resources */,
+				EEA701C128BAA4F700688C2E /* UserPublicationCells.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +373,6 @@
 				EE9C2EC528B98E9600FB063F /* APICeiba.swift in Sources */,
 				EE9C2EDE28BA7EEC00FB063F /* BaseViewController.swift in Sources */,
 				EE9C2EDA28B996E400FB063F /* ListAppUsersService.swift in Sources */,
-				EEA701BF28BAA45400688C2E /* PublicationUserService.swift in Sources */,
 				EE9C2ECB28B993D000FB063F /* CustomView.swift in Sources */,
 				EE9C2ED528B9967800FB063F /* LocationDetailsModel.swift in Sources */,
 				EE9C2ECE28B995F300FB063F /* UsersCells.swift in Sources */,

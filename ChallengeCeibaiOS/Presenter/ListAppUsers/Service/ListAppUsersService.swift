@@ -17,6 +17,10 @@ import UIKit
         self.apisEndPoint = apisEndPoint
         self.apiCeiba = apiCeiba
     }
+}
+
+// MARK: - Upload Users List
+extension ListAppUsersService {
     
     func loadingUsersList(completionHandler: @escaping ([UserInventoryModel]) -> Void) {
         
@@ -25,9 +29,15 @@ import UIKit
             completionHandler(result)
         }
     }
-    
 }
 
-
-
-
+// MARK: - Load User Posts
+extension ListAppUsersService {
+    func loadingUserPublications(_ valueUserID: Int,completionHandler: @escaping ([PublicationUserModel]) -> Void) {
+        
+        let url = apisEndPoint.createMainPoint(idValue: "/posts?userId=\(valueUserID)")
+        apiCeiba.genericRequest(urlAPI: url) { (result: [PublicationUserModel]) in
+            completionHandler(result)
+        }
+    }
+}
