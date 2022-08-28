@@ -10,15 +10,39 @@ import UIKit
 class ListAppUsersViewController: BaseViewController {
     
     private let ceibaService =  ListAppUsersService()
-    private var listUser: [UserInventoryModel]?
-    
+    private var dataListUsers: [UserInventoryModel]?
+    private var dataFilterUserNameList: [UserInventoryModel]?
+
     @IBOutlet weak var tableViewListUser: UITableView!
+    @IBOutlet weak var searchBarInList: UISearchBar!
+    @IBOutlet weak var emptyListString: UILabel!
+    
+    private var statusValue = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTablewView()
-        getDataUser()
+        setupView()
      }
+}
+
+// MARK: - ConfigTableView
+extension ListAppUsersViewController {
+    
+    func setupView() {
+        setupTablewView()
+        searchBarConfiguration()
+        getDataUser()
+    }
+    
+    func reloadData() {
+        tableViewListUser.reloadData()
+    }
+    
+    func setupTablewView() {
+        tableViewListUser.register(UINib(nibName: UsersCells.viewIdCell, bundle: .main), forCellReuseIdentifier: UsersCells.viewIdCell)
+        tableViewListUser.separatorInset = .zero
+        tableViewListUser.separatorColor = .clear
+    }
     
 }
 
@@ -31,39 +55,63 @@ extension ListAppUsersViewController {
     }
 }
 
-// MARK: - ConfigTableView
-extension ListAppUsersViewController {
+// -MARK: - SearchBarDelegate
+extension ListAppUsersViewController: UISearchBarDelegate {
     
-    func reloadData() {
-        tableViewListUser.reloadData()
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if (searchText == String()) {
+            reloadData()
+            emptyListString.isHidden = true
+        } else {
+            let resultListUsersFilter =  dataListUsers?.filter {
+                usersSearchSuccess(statusValue: statusValue, searchText: searchText, nameUser: $0.name ?? String())
+            }
+            dataListUsers = resultListUsersFilter
+            emptyListString.isHidden = dataListUsers?.count ?? 0 > 0 ? true : false
+            reloadData()
+        }
     }
     
-    func setupTablewView() {
-        tableViewListUser.register(UINib(nibName: UsersCells.viewIdCell, bundle: .main), forCellReuseIdentifier: UsersCells.viewIdCell)
+    func usersSearchSuccess(statusValue: Bool, searchText: String, nameUser: String) -> Bool{
+        
+        var resultValue = statusValue
+        
+        if let range: Range<String.Index> = nameUser.range(of: "\(searchText)") {
+            print(range)
+            resultValue = true
+        } else {
+            resultValue = false
+            refreshData()
+        }
+        return resultValue
     }
     
+    
+    func searchBarConfiguration() {
+        searchBarInList.delegate = self
+        searchBarInList.placeholder = "Search Name User"
+        emptyListString.isHidden = true
+    }
 }
 
 // MARK: - SetupDataSource
 extension ListAppUsersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return listUser?.count ?? Int()
+        return dataListUsers?.count ?? Int()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: UsersCells.viewIdCell, for: indexPath)
         
-        cell.selectionStyle = .none
-
-        if let cell = cell as? UsersCells , let listUsersArray = listUser {
+        if let cell = cell as? UsersCells , let listUsersArray = dataListUsers {
             cell.setupItemsUserCell(with: listUsersArray[indexPath.row])
             cell.userPublications.addTarget(.none, action: #selector(self.showPublicationsButton(_:)), for: .touchUpInside)
             cell.userPublications.tag = listUsersArray[indexPath.row].id ?? Int()
         }
-
+        cell.selectionStyle = .none
         return cell
     }
 }
@@ -71,20 +119,26 @@ extension ListAppUsersViewController: UITableViewDataSource {
 // MARK: - Service Request
 extension ListAppUsersViewController {
     
+    func refreshData() {
+        ceibaService.loadingUsersList { [weak self] decodedUsersData in
+            guard let self = self else { return }
+                self.dataListUsers = decodedUsersData
+                self.dataFilterUserNameList = decodedUsersData
+        }
+    }
+    
     func loadListUsers() {
-        
         initStarAnimation()
         ceibaService.loadingUsersList { [weak self] decodedUsersData in
             guard let self = self else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
                 self.finishAnimation()
-                self.listUser = decodedUsersData
+                self.dataListUsers = decodedUsersData
+                self.dataFilterUserNameList = decodedUsersData
                 self.reloadData()
             }
         }
     }
-    
-    
 }
 
 // MARK: - Configurating Action Button

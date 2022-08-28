@@ -22,9 +22,9 @@ import UIKit
         super.awakeFromNib()
         cardView.backgroundColor = color
         cardView.cornerRadiusCardView = cornerRadiusButton
-        cardView.shadowColor = cardView.shadowColor
-        cardView.borderWidth = 2
-        cardView.borderColor = #colorLiteral(red: 0.9951933026, green: 1, blue: 1, alpha: 1)
+        cardView.shadowColor = .clear
+        cardView.borderWidth = 1
+        cardView.borderColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
     }
     
     override func prepareForReuse() {
@@ -39,7 +39,7 @@ extension UserPublicationCells {
     func organizeCell(with postsList: PublicationUserModel) {
         
         titleOfPublication.text = "Titulus: \(postsList.title ?? String())"
-        descriptionOfPublication.text = "Descriptio: \(postsList.title ?? String())"
+        descriptionOfPublication.text = "Descriptio: \(postsList.body ?? String())"
     }
     
     func clearPublicationsUsers() {

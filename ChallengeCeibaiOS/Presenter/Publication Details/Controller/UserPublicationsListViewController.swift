@@ -26,6 +26,8 @@ extension UserPublicationsListViewController {
     
     func tableViewConfiguration() {
         publicationsTableView.register(UINib(nibName: UserPublicationCells.viewIdCell, bundle: .main), forCellReuseIdentifier: UserPublicationCells.viewIdCell)
+        publicationsTableView.separatorInset = .zero
+        publicationsTableView.separatorColor = .clear
     }
 }
 

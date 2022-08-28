@@ -22,6 +22,19 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dgY-7I-ELi">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="INc-nb-hx9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIST IS EMPTY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OAx-2Y-o36">
+                                            <rect key="frame" x="0.0" y="774" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                            <color key="textColor" red="0.01176470588" green="0.031372549020000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="cf2-l4-aNZ"/>
                                         </connections>
@@ -47,6 +60,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="OQ5-MC-maQ"/>
                     <connections>
+                        <outlet property="emptyListString" destination="OAx-2Y-o36" id="uyp-V5-bf7"/>
+                        <outlet property="searchBarInList" destination="INc-nb-hx9" id="OKs-Ps-7Jm"/>
                         <outlet property="tableViewListUser" destination="dgY-7I-ELi" id="9Y4-3r-Nrk"/>
                     </connections>
                 </viewController>

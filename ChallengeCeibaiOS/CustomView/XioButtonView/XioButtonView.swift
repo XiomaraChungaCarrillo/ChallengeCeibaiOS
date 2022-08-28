@@ -85,7 +85,7 @@ class XioButtonView: UIButton {
         cardView.backgroundColor = color
         cardView.cornerRadiusCardView = cornerRadiusButton
         cardView.shadowColor = cardView.shadowColor
-        cardView.borderWidth = 2
+        cardView.borderWidth = 1
         cardView.borderColor = #colorLiteral(red: 0.9951933026, green: 1, blue: 1, alpha: 1)
         title.text = text
         title.textColor = #colorLiteral(red: 0.9951933026, green: 1, blue: 1, alpha: 1)
